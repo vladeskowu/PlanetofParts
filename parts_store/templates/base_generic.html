@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'parts_store/css/styles.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'parts_store:product_list' %}">Products</a>
+        <a href="{% url 'parts_store:about' %}">About Us</a>
+        <a href="{% url 'parts_store:add_product' %}">Basket</a>
+        <a href="{% url 'parts_store:user_profile' %}">Your profile</a>
+        <a href="{% url 'parts_store:register_view' %}">Sign in or Sign up</a>
+    </div>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

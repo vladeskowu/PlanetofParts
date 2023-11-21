@@ -1,0 +1,23 @@
+body {
+    background-image: url('/static/parts_store/css/background.jpg');
+    background-size: 20% auto;
+    background-position: center bottom -100px;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #555;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: #ff0000;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}

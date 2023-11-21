@@ -1,0 +1,18 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Add to Cart{% endblock %}
+
+{% block content %}
+  <h1>You may find interesting</h1>
+
+  {% if product %}
+    <p>{{ product.name }} - ${{ product.price }}</p>
+    <form method="post" action="{% url 'parts_store:add_to_cart' product.id %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Add to basket</button>
+    </form>
+  {% else %}
+    <p>You cart is empty.</p>
+  {% endif %}
+{% endblock %}
